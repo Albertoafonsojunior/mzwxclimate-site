@@ -1,0 +1,301 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+MZ WX & Climate - Sol
+</title>
+
+
+<style>
+
+body{
+
+font-family:Arial;
+background:#f5f7fa;
+padding:30px;
+
+}
+
+
+.container{
+
+background:white;
+max-width:900px;
+margin:auto;
+padding:30px;
+border-radius:15px;
+
+}
+
+
+select,input{
+
+padding:10px;
+margin:5px;
+font-size:16px;
+
+}
+
+
+.result{
+
+margin-top:30px;
+background:#eef6ff;
+padding:20px;
+border-radius:10px;
+
+}
+
+
+.sunrise{
+
+color:#e67e22;
+font-size:25px;
+
+}
+
+
+.sunset{
+
+color:#8e44ad;
+font-size:25px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+☀️ Nascer e Pôr do Sol - Moçambique
+</h1>
+
+
+<label>
+Província:
+</label>
+
+<select id="province"></select>
+
+
+
+<label>
+Cidade:
+</label>
+
+<select id="city"></select>
+
+
+<br>
+
+
+<label>
+Data:
+</label>
+
+<input type="date" id="date">
+
+
+
+<div class="result" id="result">
+
+Escolha uma localidade.
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+let data=[];
+
+
+fetch("../data/sun_data.json")
+
+.then(r=>r.json())
+
+.then(json=>{
+
+data=json;
+
+loadProvinces();
+
+});
+
+
+
+function loadProvinces(){
+
+let p=document.getElementById("province");
+
+
+let provinces=[...new Set(
+data.map(x=>x.province)
+)];
+
+
+p.innerHTML="";
+
+
+provinces.forEach(x=>{
+
+p.innerHTML+=
+`<option>${x}</option>`;
+
+});
+
+
+loadCities();
+
+
+}
+
+
+
+function loadCities(){
+
+let province=
+document.getElementById("province").value;
+
+
+let c=document.getElementById("city");
+
+
+let cities=[...new Set(
+data
+.filter(x=>x.province==province)
+.map(x=>x.city)
+)];
+
+
+c.innerHTML="";
+
+
+cities.forEach(x=>{
+
+c.innerHTML+=
+`<option>${x}</option>`;
+
+});
+
+
+showData();
+
+}
+
+
+
+function showData(){
+
+
+let province=
+document.getElementById("province").value;
+
+
+let city=
+document.getElementById("city").value;
+
+
+let date=
+document.getElementById("date").value;
+
+
+let item=data.find(x=>
+
+x.province==province &&
+x.city==city &&
+x.date==date
+
+);
+
+
+
+if(item){
+
+document.getElementById("result").innerHTML=`
+
+<h2>
+${item.city}
+</h2>
+
+<p>
+📅 ${item.date}
+</p>
+
+
+<p class="sunrise">
+🌅 Nascer: ${item.sunrise}
+</p>
+
+
+<p class="sunset">
+🌇 Pôr: ${item.sunset}
+</p>
+
+
+<p>
+⏱ Duração:
+${item.day_length}
+</p>
+
+`;
+
+}
+
+}
+
+
+
+document
+.getElementById("province")
+.addEventListener(
+"change",
+loadCities
+);
+
+
+
+document
+.getElementById("city")
+.addEventListener(
+"change",
+showData
+);
+
+
+
+document
+.getElementById("date")
+.addEventListener(
+"change",
+showData
+);
+
+
+</script>
+
+
+</body>
+
+</html>
+
+
