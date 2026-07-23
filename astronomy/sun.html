@@ -13,31 +13,49 @@
 <style>
 
 body{
-    font-family:Arial,sans-serif;
-    background:#eef3f8;
+
     margin:0;
-    padding:40px;
+    padding:25px;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef3f8;
+
 }
 
-.container{
+.wrapper{
 
-    max-width:900px;
+    display:flex;
+    gap:25px;
+    align-items:flex-start;
 
-    margin:auto;
+}
+
+.panel{
+
+    width:320px;
 
     background:white;
 
-    padding:30px;
+    padding:20px;
 
     border-radius:12px;
 
-    box-shadow:0 0 15px rgba(0,0,0,.15);
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
 
 }
 
-h1{
+.panel h1{
 
+    margin-top:0;
     color:#0b4f9c;
+    font-size:24px;
+
+}
+
+label{
+
+    display:block;
+    margin-top:18px;
+    font-weight:bold;
 
 }
 
@@ -46,43 +64,63 @@ input{
 
     width:100%;
 
-    padding:12px;
+    padding:10px;
 
-    margin-top:8px;
+    margin-top:6px;
 
-    margin-bottom:20px;
+    font-size:15px;
 
-    font-size:16px;
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    box-sizing:border-box;
 
 }
 
 .result{
 
-    margin-top:25px;
+    flex:1;
 
-    padding:20px;
+    background:white;
 
-    background:#f7fbff;
+    border-radius:12px;
 
-    border-left:6px solid #1565c0;
+    padding:30px;
 
-    border-radius:8px;
+    min-height:320px;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
 
 }
 
-.value{
+.result h2{
 
-    font-size:28px;
+    margin-top:0;
+    color:#0b4f9c;
 
+}
+
+.big{
+
+    font-size:34px;
+    color:#e67e22;
     font-weight:bold;
 
-    color:#e67e22;
+}
+
+.subtitle{
+
+    color:#666;
 
 }
 
-.small{
+hr{
 
-    color:#666;
+    border:none;
+    border-top:1px solid #ddd;
+
+    margin:20px 0;
 
 }
 
@@ -92,48 +130,39 @@ input{
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-<h1>☀️ Nascer e Pôr do Sol</h1>
+<div class="panel">
 
-<p>
+<h1>☀️ Astronomia</h1>
 
-Seleccione uma província,
-um distrito e uma data.
-
-</p>
-
-<label>
-
-Província
-
-</label>
+<label>Província</label>
 
 <select id="province"></select>
 
-<label>
-
-Distrito
-
-</label>
+<label>Distrito</label>
 
 <select id="district"></select>
 
-<label>
+<label>Data</label>
 
-Data
+<input type="date" id="date">
 
-</label>
-
-<input
-type="date"
-id="date">
+</div>
 
 <div
 id="result"
 class="result">
 
-Escolha uma localidade.
+<h2>Nascer e Pôr do Sol</h2>
+
+<p>
+
+Seleccione uma província,
+um distrito
+e uma data.
+
+</p>
 
 </div>
 
@@ -157,203 +186,157 @@ fetch("../data/locations.json")
 
 });
 
-
-
 function loadProvinces(){
 
     let provinces=[
+
         ...new Set(
-            locations.map(
-                x=>x.province
-            )
+
+            locations.map(x=>x.province)
+
         )
+
     ];
 
     provinces.sort();
 
-    let html="";
+    province.innerHTML="";
 
     provinces.forEach(p=>{
 
-        html+=`<option>${p}</option>`;
+        province.innerHTML+=`<option>${p}</option>`;
 
     });
-
-    province.innerHTML=html;
 
     loadDistricts();
 
 }
 
-
-
 function loadDistricts(){
 
-    let prov=
-        province.value;
+    let prov=province.value;
 
-    let districts=
+    let districts=locations
 
-        locations
-
-        .filter(
-
-            x=>x.province==prov
-
-        )
+        .filter(x=>x.province==prov)
 
         .sort(
 
             (a,b)=>
 
-            a.district.localeCompare(
-                b.district
-            )
+            a.district.localeCompare(b.district)
 
         );
 
-    let html="";
+    district.innerHTML="";
 
     districts.forEach(d=>{
 
-        html+=`
+        district.innerHTML+=
 
-<option value="${d.district}">
+`<option value="${d.district}">
+
 ${d.district}
-</option>
 
-`;
+</option>`;
 
     });
-
-    district.innerHTML=html;
 
     calculate();
 
 }
 
-
-
 function calculate(){
 
-    let prov=
-        province.value;
+    if(date.value=="") return;
 
-    let dist=
-        district.value;
+    let loc=locations.find(
 
-    let dt=
-        date.value;
+        x=>
 
-    if(dt==""){
+        x.province==province.value &&
 
-        return;
+        x.district==district.value
 
-    }
+    );
 
-    let loc=
+    if(!loc) return;
 
-        locations.find(
+    let p=date.value.split("-");
 
-            x=>
+    let sun=calculateSunTimes(
 
-            x.province==prov &&
+        loc.lat,
 
-            x.district==dist
+        loc.lon,
 
-        );
+        parseInt(p[0]),
 
-    if(!loc){
+        parseInt(p[1]),
 
-        return;
+        parseInt(p[2])
 
-    }
+    );
 
-    let parts=
-        dt.split("-");
-
-    let year=
-        parseInt(parts[0]);
-
-    let month=
-        parseInt(parts[1]);
-
-    let day=
-        parseInt(parts[2]);
-
-    let sun=
-
-        calculateSunTimes(
-
-            loc.lat,
-
-            loc.lon,
-
-            year,
-
-            month,
-
-            day
-
-        );
-
-    result.innerHTML=
-
-`
+    result.innerHTML=`
 
 <h2>
 
-${dist}
+${loc.district}
 
 </h2>
 
-<p>
+<div class="subtitle">
 
-${prov}
+${loc.province}
 
-</p>
+</div>
 
 <hr>
 
 <p>
 
-📅 ${dt}
+📅 ${date.value}
 
 </p>
 
 <p>
 
-🌅
+🌅 Nascer
 
-<span class="value">
+</p>
+
+<div class="big">
 
 ${sun.sunrise}
 
-</span>
-
-</p>
+</div>
 
 <p>
 
-🌇
+🌇 Pôr do Sol
 
-<span class="value">
+</p>
+
+<div class="big">
 
 ${sun.sunset}
 
-</span>
-
-</p>
+</div>
 
 <p>
 
-☀️
+☀️ Duração do dia
 
-${sun.day_length}
+<br>
+
+<b>${sun.day_length}</b>
 
 </p>
 
-<p class="small">
+<hr>
+
+<p class="subtitle">
 
 Latitude:
 ${loc.lat.toFixed(4)}
@@ -369,8 +352,6 @@ ${loc.lon.toFixed(4)}
 
 }
 
-
-
 province.onchange=loadDistricts;
 
 district.onchange=calculate;
@@ -384,6 +365,5 @@ date.valueAsDate=new Date();
 </body>
 
 </html>
-
 
 
