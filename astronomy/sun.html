@@ -2,71 +2,87 @@
 
 
 <!DOCTYPE html>
-
 <html lang="pt">
 
 <head>
 
 <meta charset="UTF-8">
 
-<title>
-MZ WX & Climate - Sol
-</title>
-
+<title>MZ WX & Climate - Astronomia</title>
 
 <style>
 
 body{
-
-font-family:Arial;
-background:#f5f7fa;
-padding:30px;
-
+    font-family:Arial,sans-serif;
+    background:#eef3f8;
+    margin:0;
+    padding:40px;
 }
-
 
 .container{
 
-background:white;
-max-width:900px;
-margin:auto;
-padding:30px;
-border-radius:15px;
+    max-width:900px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.15);
 
 }
 
+h1{
 
-select,input{
-
-padding:10px;
-margin:5px;
-font-size:16px;
+    color:#0b4f9c;
 
 }
 
+select,
+input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    margin-bottom:20px;
+
+    font-size:16px;
+
+}
 
 .result{
 
-margin-top:30px;
-background:#eef6ff;
-padding:20px;
-border-radius:10px;
+    margin-top:25px;
+
+    padding:20px;
+
+    background:#f7fbff;
+
+    border-left:6px solid #1565c0;
+
+    border-radius:8px;
 
 }
 
+.value{
 
-.sunrise{
+    font-size:28px;
 
-color:#e67e22;
-font-size:25px;
+    font-weight:bold;
+
+    color:#e67e22;
 
 }
 
+.small{
 
-.sunset{
-
-color:#8e44ad;
-font-size:25px;
+    color:#666;
 
 }
 
@@ -74,70 +90,70 @@ font-size:25px;
 
 </head>
 
-
 <body>
-
 
 <div class="container">
 
+<h1>☀️ Nascer e Pôr do Sol</h1>
 
-<h1>
-☀️ Nascer e Pôr do Sol - Moçambique
-</h1>
+<p>
 
+Seleccione uma província,
+um distrito e uma data.
+
+</p>
 
 <label>
-Província:
+
+Província
+
 </label>
 
 <select id="province"></select>
 
-
-
 <label>
-Cidade:
+
+Distrito
+
 </label>
 
-<select id="city"></select>
-
-
-<br>
-
+<select id="district"></select>
 
 <label>
-Data:
+
+Data
+
 </label>
 
-<input type="date" id="date">
+<input
+type="date"
+id="date">
 
-
-
-<div class="result" id="result">
+<div
+id="result"
+class="result">
 
 Escolha uma localidade.
 
 </div>
 
-
 </div>
 
-
+<script src="../assets/js/astronomy.js"></script>
 
 <script>
 
+let locations=[];
 
-let data=[];
-
-
-fetch("../data/sun_data.json")
+fetch("../data/locations.json")
 
 .then(r=>r.json())
 
 .then(json=>{
 
-data=json;
+    locations=json;
 
-loadProvinces();
+    loadProvinces();
 
 });
 
@@ -145,157 +161,229 @@ loadProvinces();
 
 function loadProvinces(){
 
-let p=document.getElementById("province");
+    let provinces=[
+        ...new Set(
+            locations.map(
+                x=>x.province
+            )
+        )
+    ];
 
+    provinces.sort();
 
-let provinces=[...new Set(
-data.map(x=>x.province)
-)];
+    let html="";
 
+    provinces.forEach(p=>{
 
-p.innerHTML="";
+        html+=`<option>${p}</option>`;
 
+    });
 
-provinces.forEach(x=>{
+    province.innerHTML=html;
 
-p.innerHTML+=
-`<option>${x}</option>`;
-
-});
-
-
-loadCities();
-
-
-}
-
-
-
-function loadCities(){
-
-let province=
-document.getElementById("province").value;
-
-
-let c=document.getElementById("city");
-
-
-let cities=[...new Set(
-data
-.filter(x=>x.province==province)
-.map(x=>x.city)
-)];
-
-
-c.innerHTML="";
-
-
-cities.forEach(x=>{
-
-c.innerHTML+=
-`<option>${x}</option>`;
-
-});
-
-
-showData();
+    loadDistricts();
 
 }
 
 
 
-function showData(){
+function loadDistricts(){
+
+    let prov=
+        province.value;
+
+    let districts=
+
+        locations
+
+        .filter(
+
+            x=>x.province==prov
+
+        )
+
+        .sort(
+
+            (a,b)=>
+
+            a.district.localeCompare(
+                b.district
+            )
+
+        );
+
+    let html="";
+
+    districts.forEach(d=>{
+
+        html+=`
+
+<option value="${d.district}">
+${d.district}
+</option>
+
+`;
+
+    });
+
+    district.innerHTML=html;
+
+    calculate();
+
+}
 
 
-let province=
-document.getElementById("province").value;
 
+function calculate(){
 
-let city=
-document.getElementById("city").value;
+    let prov=
+        province.value;
 
+    let dist=
+        district.value;
 
-let date=
-document.getElementById("date").value;
+    let dt=
+        date.value;
 
+    if(dt==""){
 
-let item=data.find(x=>
+        return;
 
-x.province==province &&
-x.city==city &&
-x.date==date
+    }
 
-);
+    let loc=
 
+        locations.find(
 
+            x=>
 
-if(item){
+            x.province==prov &&
 
-document.getElementById("result").innerHTML=`
+            x.district==dist
+
+        );
+
+    if(!loc){
+
+        return;
+
+    }
+
+    let parts=
+        dt.split("-");
+
+    let year=
+        parseInt(parts[0]);
+
+    let month=
+        parseInt(parts[1]);
+
+    let day=
+        parseInt(parts[2]);
+
+    let sun=
+
+        calculateSunTimes(
+
+            loc.lat,
+
+            loc.lon,
+
+            year,
+
+            month,
+
+            day
+
+        );
+
+    result.innerHTML=
+
+`
 
 <h2>
-${item.city}
+
+${dist}
+
 </h2>
 
 <p>
-📅 ${item.date}
+
+${prov}
+
 </p>
 
-
-<p class="sunrise">
-🌅 Nascer: ${item.sunrise}
-</p>
-
-
-<p class="sunset">
-🌇 Pôr: ${item.sunset}
-</p>
-
+<hr>
 
 <p>
-⏱ Duração:
-${item.day_length}
+
+📅 ${dt}
+
+</p>
+
+<p>
+
+🌅
+
+<span class="value">
+
+${sun.sunrise}
+
+</span>
+
+</p>
+
+<p>
+
+🌇
+
+<span class="value">
+
+${sun.sunset}
+
+</span>
+
+</p>
+
+<p>
+
+☀️
+
+${sun.day_length}
+
+</p>
+
+<p class="small">
+
+Latitude:
+${loc.lat.toFixed(4)}
+
+<br>
+
+Longitude:
+${loc.lon.toFixed(4)}
+
 </p>
 
 `;
 
 }
 
-}
 
 
+province.onchange=loadDistricts;
 
-document
-.getElementById("province")
-.addEventListener(
-"change",
-loadCities
-);
+district.onchange=calculate;
 
+date.onchange=calculate;
 
-
-document
-.getElementById("city")
-.addEventListener(
-"change",
-showData
-);
-
-
-
-document
-.getElementById("date")
-.addEventListener(
-"change",
-showData
-);
-
+date.valueAsDate=new Date();
 
 </script>
-
 
 </body>
 
 </html>
+
 
 
