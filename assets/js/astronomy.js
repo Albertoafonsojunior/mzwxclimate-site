@@ -268,4 +268,50 @@ function calculateSunTimes(
 }
 
 
+//=======================================================================
+
+/* ===========================================================
+   Distância Terra-Sol
+=========================================================== */
+
+function earthSunDistance(
+    year,
+    month,
+    day
+){
+
+    const n = dayOfYear(
+        year,
+        month,
+        day
+    );
+
+
+    const meanDistance = 149600000;
+
+    const distance =
+        meanDistance /
+        Math.sqrt(
+            1 +
+            0.033 *
+            Math.cos(
+                2 * Math.PI * n / 365
+            )
+        );
+
+    return {
+
+        distance_km: distance,
+
+        distance_au:
+            distance / meanDistance,
+
+        day_of_year: n
+
+    };
+
+}
+
+//===============================================================================
+
 
