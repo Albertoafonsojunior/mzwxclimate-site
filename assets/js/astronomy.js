@@ -315,3 +315,64 @@ function earthSunDistance(
 //===============================================================================
 
 
+/*
+=========================================================
+Eventos astronómicos
+=========================================================
+*/
+
+function getAstronomicalEvent(month, day){
+
+    const key =
+        String(month).padStart(2,"0")
+        + "-"
+        + String(day).padStart(2,"0");
+
+    const events = {
+
+        "01-03":{
+            title:"🌍 Periélio",
+            description:
+                "A Terra encontra-se na menor distância ao Sol."
+        },
+
+        "03-20":{
+            title:"🌸 Equinócio de Março",
+            description:
+                "Início do Outono no Hemisfério Sul."
+        },
+
+        "06-21":{
+            title:"❄️ Solstício de Junho",
+            description:
+                "Início do Inverno no Hemisfério Sul."
+        },
+
+        "07-04":{
+            title:"☀️ Afélio",
+            description:
+                "A Terra encontra-se na maior distância ao Sol."
+        },
+
+        "09-22":{
+            title:"🌼 Equinócio de Setembro",
+            description:
+                "Início da Primavera no Hemisfério Sul."
+        },
+
+        "12-21":{
+            title:"🔥 Solstício de Dezembro",
+            description:
+                "Início do Verão no Hemisfério Sul."
+        }
+
+    };
+
+    return events[key] || null;
+
+}
+
+//===============================================================================
+
+
+
