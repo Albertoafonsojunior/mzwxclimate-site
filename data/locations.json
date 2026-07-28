@@ -241,6 +241,12 @@
   },
   {
     "province": "Inhambane",
+    "district": "Maxixe",
+    "lat": -23.8597,
+    "lon": 35.3472
+  },
+  {
+    "province": "Inhambane",
     "district": "Morrumbene",
     "lat": -23.47299,
     "lon": 35.09629
@@ -564,96 +570,6 @@
     "lon": 38.19628
   },
   {
-    "province": "Nassa",
-    "district": "Cuamba",
-    "lat": -14.74714,
-    "lon": 36.54459
-  },
-  {
-    "province": "Nassa",
-    "district": "Lago",
-    "lat": -12.30563,
-    "lon": 34.83866
-  },
-  {
-    "province": "Nassa",
-    "district": "Lichinga",
-    "lat": -13.37858,
-    "lon": 35.18914
-  },
-  {
-    "province": "Nassa",
-    "district": "Majune",
-    "lat": -13.31889,
-    "lon": 36.37372
-  },
-  {
-    "province": "Nassa",
-    "district": "Mandimba",
-    "lat": -14.14181,
-    "lon": 35.98005
-  },
-  {
-    "province": "Nassa",
-    "district": "Marrupa",
-    "lat": -13.0286,
-    "lon": 37.52022
-  },
-  {
-    "province": "Nassa",
-    "district": "Mavago",
-    "lat": -12.23383,
-    "lon": 36.40543
-  },
-  {
-    "province": "Nassa",
-    "district": "Maúa",
-    "lat": -13.90136,
-    "lon": 37.04244
-  },
-  {
-    "province": "Nassa",
-    "district": "Mecanhelas",
-    "lat": -14.84326,
-    "lon": 35.99436
-  },
-  {
-    "province": "Nassa",
-    "district": "Mecula",
-    "lat": -11.95725,
-    "lon": 37.5663
-  },
-  {
-    "province": "Nassa",
-    "district": "Metarica",
-    "lat": -14.32292,
-    "lon": 36.86237
-  },
-  {
-    "province": "Nassa",
-    "district": "Muembe",
-    "lat": -12.82514,
-    "lon": 35.81271
-  },
-  {
-    "province": "Nassa",
-    "district": "N'gauma",
-    "lat": -13.81955,
-    "lon": 35.57025
-  },
-  {
-    "province": "Nassa",
-    "district": "Nipepe",
-    "lat": -13.98525,
-    "lon": 37.90256
-  },
-  {
-    "province": "Nassa",
-    "district": "Sanga",
-    "lat": -12.18397,
-    "lon": 35.55616
-  },
-  {
     "province": "Niassa",
     "district": "Chimbonila",
     "lat": -13.37,
@@ -661,9 +577,93 @@
   },
   {
     "province": "Niassa",
+    "district": "Cuamba",
+    "lat": -14.74714,
+    "lon": 36.54459
+  },
+  {
+    "province": "Niassa",
+    "district": "Lago",
+    "lat": -12.30563,
+    "lon": 34.83866
+  },
+  {
+    "province": "Niassa",
     "district": "Lichinga",
     "lat": -13.3128,
     "lon": 35.2406
+  },
+  {
+    "province": "Niassa",
+    "district": "Majune",
+    "lat": -13.31889,
+    "lon": 36.37372
+  },
+  {
+    "province": "Niassa",
+    "district": "Mandimba",
+    "lat": -14.14181,
+    "lon": 35.98005
+  },
+  {
+    "province": "Niassa",
+    "district": "Marrupa",
+    "lat": -13.0286,
+    "lon": 37.52022
+  },
+  {
+    "province": "Niassa",
+    "district": "Mavago",
+    "lat": -12.23383,
+    "lon": 36.40543
+  },
+  {
+    "province": "Niassa",
+    "district": "Maúa",
+    "lat": -13.90136,
+    "lon": 37.04244
+  },
+  {
+    "province": "Niassa",
+    "district": "Mecanhelas",
+    "lat": -14.84326,
+    "lon": 35.99436
+  },
+  {
+    "province": "Niassa",
+    "district": "Mecula",
+    "lat": -11.95725,
+    "lon": 37.5663
+  },
+  {
+    "province": "Niassa",
+    "district": "Metarica",
+    "lat": -14.32292,
+    "lon": 36.86237
+  },
+  {
+    "province": "Niassa",
+    "district": "Muembe",
+    "lat": -12.82514,
+    "lon": 35.81271
+  },
+  {
+    "province": "Niassa",
+    "district": "N'gauma",
+    "lat": -13.81955,
+    "lon": 35.57025
+  },
+  {
+    "province": "Niassa",
+    "district": "Nipepe",
+    "lat": -13.98525,
+    "lon": 37.90256
+  },
+  {
+    "province": "Niassa",
+    "district": "Sanga",
+    "lat": -12.18397,
+    "lon": 35.55616
   },
   {
     "province": "Sofala",
@@ -904,6 +904,12 @@
     "district": "Mocuba",
     "lat": -16.85302,
     "lon": 36.86372
+  },
+  {
+    "province": "Zambezia",
+    "district": "Mocubela",
+    "lat": -16.0833,
+    "lon": 36.9833
   },
   {
     "province": "Zambezia",
