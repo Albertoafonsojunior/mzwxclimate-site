@@ -19,6 +19,12 @@
   },
   {
     "province": "Cabo Delgado",
+    "district": "Ibo",
+    "lat": -12.35,
+    "lon": 40.6
+  },
+  {
+    "province": "Cabo Delgado",
     "district": "Macomia",
     "lat": -12.09114,
     "lon": 40.21074
@@ -34,6 +40,12 @@
     "district": "Meluco",
     "lat": -12.46381,
     "lon": 39.62366
+  },
+  {
+    "province": "Cabo Delgado",
+    "district": "Metuge",
+    "lat": -12.972,
+    "lon": 40.329
   },
   {
     "province": "Cabo Delgado",
@@ -115,6 +127,12 @@
   },
   {
     "province": "Gaza",
+    "district": "Chongoene",
+    "lat": -25.033,
+    "lon": 33.654
+  },
+  {
+    "province": "Gaza",
     "district": "Chókwè",
     "lat": -24.56221,
     "lon": 32.95557
@@ -127,6 +145,12 @@
   },
   {
     "province": "Gaza",
+    "district": "Limpopo",
+    "lat": -24.997,
+    "lon": 32.842
+  },
+  {
+    "province": "Gaza",
     "district": "Mabalane",
     "lat": -23.47947,
     "lon": 32.73747
@@ -136,6 +160,12 @@
     "district": "Mandlakazi",
     "lat": -24.63165,
     "lon": 34.0696
+  },
+  {
+    "province": "Gaza",
+    "district": "Mapai",
+    "lat": -22.837,
+    "lon": 31.963
   },
   {
     "province": "Gaza",
@@ -259,6 +289,12 @@
   },
   {
     "province": "Manica",
+    "district": "Macate",
+    "lat": -19.05,
+    "lon": 33.5
+  },
+  {
+    "province": "Manica",
     "district": "Machaze",
     "lat": -21.04375,
     "lon": 33.27065
@@ -294,6 +330,12 @@
     "lon": 34.10581
   },
   {
+    "province": "Manica",
+    "district": "Vanduzi",
+    "lat": -18.979,
+    "lon": 33.357
+  },
+  {
     "province": "Maputo",
     "district": "Boane",
     "lat": -26.02887,
@@ -316,6 +358,12 @@
     "district": "Marracuene",
     "lat": -25.65302,
     "lon": 32.71315
+  },
+  {
+    "province": "Maputo",
+    "district": "Matola",
+    "lat": -25.9622,
+    "lon": 32.4589
   },
   {
     "province": "Maputo",
@@ -343,9 +391,39 @@
   },
   {
     "province": "Maputo City",
+    "district": "KaMavota",
+    "lat": -25.85,
+    "lon": 32.6
+  },
+  {
+    "province": "Maputo City",
+    "district": "KaMaxaquene",
+    "lat": -25.95,
+    "lon": 32.59
+  },
+  {
+    "province": "Maputo City",
+    "district": "KaMpfumo",
+    "lat": -25.968,
+    "lon": 32.573
+  },
+  {
+    "province": "Maputo City",
+    "district": "KaMubukwana",
+    "lat": -25.9,
+    "lon": 32.5
+  },
+  {
+    "province": "Maputo City",
     "district": "Maputo",
     "lat": -25.90548,
     "lon": 32.5871
+  },
+  {
+    "province": "Maputo City",
+    "district": "Nlhamankulu",
+    "lat": -25.965,
+    "lon": 32.55
   },
   {
     "province": "Nampula",
@@ -361,9 +439,27 @@
   },
   {
     "province": "Nampula",
+    "district": "Ilha de Moçambique",
+    "lat": -15.0342,
+    "lon": 40.7358
+  },
+  {
+    "province": "Nampula",
     "district": "Lalaua",
     "lat": -14.43361,
     "lon": 38.12796
+  },
+  {
+    "province": "Nampula",
+    "district": "Larde",
+    "lat": -14.99,
+    "lon": 40.62
+  },
+  {
+    "province": "Nampula",
+    "district": "Liupo",
+    "lat": -14.87,
+    "lon": 40.12
   },
   {
     "province": "Nampula",
@@ -433,6 +529,12 @@
   },
   {
     "province": "Nampula",
+    "district": "Nacala Porto",
+    "lat": -14.5428,
+    "lon": 40.6729
+  },
+  {
+    "province": "Nampula",
     "district": "Nacala Velha",
     "lat": -14.55712,
     "lon": 40.53373
@@ -448,6 +550,12 @@
     "district": "Nampula",
     "lat": -15.12448,
     "lon": 39.13815
+  },
+  {
+    "province": "Nampula",
+    "district": "Rapale",
+    "lat": -15.06,
+    "lon": 39.23
   },
   {
     "province": "Nampula",
@@ -544,6 +652,18 @@
     "district": "Sanga",
     "lat": -12.18397,
     "lon": 35.55616
+  },
+  {
+    "province": "Niassa",
+    "district": "Chimbonila",
+    "lat": -13.37,
+    "lon": 35.35
+  },
+  {
+    "province": "Niassa",
+    "district": "Lichinga",
+    "lat": -13.3128,
+    "lon": 35.2406
   },
   {
     "province": "Sofala",
@@ -655,6 +775,12 @@
   },
   {
     "province": "Tete",
+    "district": "Doa",
+    "lat": -16.45,
+    "lon": 33.17
+  },
+  {
+    "province": "Tete",
     "district": "Macanga",
     "lat": -14.80195,
     "lon": 33.53507
@@ -664,6 +790,12 @@
     "district": "Magoe",
     "lat": -15.90234,
     "lon": 31.36317
+  },
+  {
+    "province": "Tete",
+    "district": "Marara",
+    "lat": -15.92,
+    "lon": 32.97
   },
   {
     "province": "Tete",
@@ -715,6 +847,12 @@
   },
   {
     "province": "Zambezia",
+    "district": "Derre",
+    "lat": -16.37,
+    "lon": 37.85
+  },
+  {
+    "province": "Zambezia",
     "district": "Gile",
     "lat": -15.92844,
     "lon": 38.30647
@@ -736,6 +874,12 @@
     "district": "Inhassunge",
     "lat": -18.05179,
     "lon": 36.80524
+  },
+  {
+    "province": "Zambezia",
+    "district": "Luabo",
+    "lat": -18.12,
+    "lon": 36.45
   },
   {
     "province": "Zambezia",
@@ -763,6 +907,12 @@
   },
   {
     "province": "Zambezia",
+    "district": "Molumbo",
+    "lat": -15.6,
+    "lon": 37.68
+  },
+  {
+    "province": "Zambezia",
     "district": "Mopeia",
     "lat": -17.83105,
     "lon": 36.06015
@@ -772,6 +922,12 @@
     "district": "Morrumbala",
     "lat": -17.05586,
     "lon": 35.79024
+  },
+  {
+    "province": "Zambezia",
+    "district": "Mulevala",
+    "lat": -15.7,
+    "lon": 36.85
   },
   {
     "province": "Zambezia",
