@@ -1,0 +1,265 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MZ WX & Climate - Seasonal Forecasts</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+<div class="container">
+
+<div class="header-content">
+
+
+<div class="logo">
+
+<h1>🌤️ MZ WX & Climate</h1>
+
+<span class="tagline">
+Weather, Climate and Seasonal Forecasts
+</span>
+
+</div>
+
+
+<nav class="main-nav">
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+<li><a href="../weather/">Weather</a></li>
+<li><a href="./" class="active">Climate</a></li>
+<li><a href="../forecasts/">Forecasts</a></li>
+<li><a href="../maps/">Maps</a></li>
+<li><a href="../data/">Data</a></li>
+<li><a href="../learning/">Learning</a></li>
+<li><a href="../about/">About</a></li>
+<li><a href="../contact/">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<h2>Seasonal Climate Forecasts</h2>
+
+<p>
+Seasonal precipitation forecasts for Mozambique based on
+CCA statistical prediction and multi-model information.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="container">
+
+
+<h2 class="section-title">
+Forecast Products
+</h2>
+
+
+
+<div class="features-grid">
+
+
+<div class="feature-card">
+
+<button onclick="showForecast('ensemble_skill')">
+📊 Ensemble Skill
+</button>
+
+</div>
+
+
+
+<div class="feature-card">
+
+<button onclick="showForecast('ensemble_forecast')">
+🌧️ Ensemble Forecast
+</button>
+
+</div>
+
+
+
+<div class="feature-card">
+
+<button onclick="showForecast('exceedance')">
+📈 Probability Exceedance
+</button>
+
+</div>
+
+
+
+<div class="feature-card">
+
+<button onclick="showForecast('models_skill')">
+🌍 Models Skill
+</button>
+
+</div>
+
+
+
+<div class="feature-card">
+
+<button onclick="showForecast('seas5')">
+🛰️ SEAS5 Forecast
+</button>
+
+</div>
+
+
+</div>
+
+
+
+<br><br>
+
+
+
+<div style="text-align:center;">
+
+
+<img 
+id="forecast-image"
+src="../assets/images/seasonal/CCA_ensemble_forecast_skillMatrices.png"
+alt="Seasonal forecast product"
+style="max-width:100%; height:auto;">
+
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+
+
+<footer class="site-footer">
+
+<div class="container">
+
+<div class="footer-bottom">
+
+<p>
+© 2026 MZ WX & Climate
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+
+<script>
+
+
+function showForecast(product){
+
+
+let image=document.getElementById("forecast-image");
+
+
+
+if(product==="ensemble_skill"){
+
+image.src="../assets/images/seasonal/CCA_ensemble_forecast_skillMatrices.png";
+
+}
+
+
+
+if(product==="ensemble_forecast"){
+
+image.src="../assets/images/seasonal/CCA_ensemble_probabilistic-deterministicForecast.png";
+
+}
+
+
+
+if(product==="exceedance"){
+
+image.src="../assets/images/seasonal/CCA_flexForecast_probExceedence.png";
+
+}
+
+
+
+if(product==="models_skill"){
+
+image.src="../assets/images/seasonal/CCA_models_skillMatrices.png";
+
+}
+
+
+
+if(product==="seas5"){
+
+image.src="../assets/images/seasonal/CCA_SEAS51c.PRCP_[determinstic-probabilistic]-Forecast.png";
+
+}
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
+
+
+
