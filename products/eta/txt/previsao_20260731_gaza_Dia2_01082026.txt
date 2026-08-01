@@ -1,0 +1,21 @@
+PREVISÃO METEOROLÓGICA - PROVÍNCIA DE GAZA
+Modelo: Eta08 | Inicialização: 31/07/2026 00UTC
+Previsão para: 01/08/2026 (Dia2_01082026)
+=================================================================
+Localidade       | Prec (mm) | Tmax (°C) | Tmin (°C)
+=================================================================
+Mapai           |      0.0 |      23.6 |      10.0
+Combomune       |      0.0 |      23.5 |      10.0
+Maniquenique    |      0.0 |      22.5 |      16.1
+Xai-Xai         |      0.1 |      21.1 |      19.7
+Dindiza         |      0.0 |      24.3 |      11.3
+Massangena      |      0.0 |      24.0 |      10.2
+Alto-Changane   |      1.6 |      23.5 |      14.2
+Guija           |      0.0 |      23.0 |      13.7
+Chicualacuala   |      0.0 |      22.5 |       9.6
+Massingir       |      0.0 |      23.1 |       9.4
+Chibuto         |      0.1 |      22.9 |      15.5
+Macia           |      1.7 |      21.6 |      17.9
+Chokwé          |      0.0 |      22.4 |      15.3
+Praia do Bilene |      1.1 |      20.9 |      19.3
+=================================================================

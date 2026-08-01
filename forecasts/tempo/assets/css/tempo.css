@@ -1,0 +1,62 @@
+
+
+
+
+
+body{
+
+font-family: Arial, sans-serif;
+
+text-align:center;
+
+}
+
+
+.controls{
+
+margin:20px;
+
+}
+
+
+select{
+
+padding:8px;
+
+margin:10px;
+
+}
+
+
+.image-container img{
+
+max-width:90%;
+
+border:1px solid #ccc;
+
+}
+
+
+
+.downloads a{
+
+display:inline-block;
+
+margin:10px;
+
+padding:10px 20px;
+
+background:#2c7be5;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:5px;
+
+}
+
+
+
+
+
