@@ -1,0 +1,220 @@
+{
+    "generated": "2026-08-01 08:15:44",
+    "maps": {
+        "RAIN_PRES_24H": {
+            "1": "RAIN_PRES_24H_2026073100.png",
+            "2": "RAIN_PRES_24H_202680100.png",
+            "3": "RAIN_PRES_24H_202680200.png"
+        },
+        "TMAX_24H": {
+            "1": "TMAX_24H_2026073100.png",
+            "2": "TMAX_24H_202680100.png",
+            "3": "TMAX_24H_202680200.png"
+        },
+        "TMEAN_24H": {
+            "1": "TMEAN_24H_2026073100.png",
+            "2": "TMEAN_24H_202680100.png",
+            "3": "TMEAN_24H_202680200.png"
+        },
+        "TMIN_24H": {
+            "1": "TMIN_24H_2026073100.png",
+            "2": "TMIN_24H_202680100.png",
+            "3": "TMIN_24H_202680200.png"
+        },
+        "WIND_24H": {
+            "1": "WIND_24H_2026073100.png",
+            "2": "WIND_24H_202680100.png",
+            "3": "WIND_24H_202680200.png"
+        },
+        "previsao_20260731_cabo_delgado_Dia1": {
+            "1": "previsao_20260731_cabo_delgado_Dia1_31072026.png"
+        },
+        "previsao_20260731_cabo_delgado_Dia2": {
+            "1": "previsao_20260731_cabo_delgado_Dia2_01082026.png"
+        },
+        "previsao_20260731_cabo_delgado_Dia3": {
+            "1": "previsao_20260731_cabo_delgado_Dia3_02082026.png"
+        },
+        "previsao_20260731_capitais_Dia1": {
+            "1": "previsao_20260731_capitais_Dia1_31072026.png"
+        },
+        "previsao_20260731_capitais_Dia2": {
+            "1": "previsao_20260731_capitais_Dia2_01082026.png"
+        },
+        "previsao_20260731_capitais_Dia3": {
+            "1": "previsao_20260731_capitais_Dia3_02082026.png"
+        },
+        "previsao_20260731_gaza_Dia1": {
+            "1": "previsao_20260731_gaza_Dia1_31072026.png"
+        },
+        "previsao_20260731_gaza_Dia2": {
+            "1": "previsao_20260731_gaza_Dia2_01082026.png"
+        },
+        "previsao_20260731_gaza_Dia3": {
+            "1": "previsao_20260731_gaza_Dia3_02082026.png"
+        },
+        "previsao_20260731_inhambane_Dia1": {
+            "1": "previsao_20260731_inhambane_Dia1_31072026.png"
+        },
+        "previsao_20260731_inhambane_Dia2": {
+            "1": "previsao_20260731_inhambane_Dia2_01082026.png"
+        },
+        "previsao_20260731_inhambane_Dia3": {
+            "1": "previsao_20260731_inhambane_Dia3_02082026.png"
+        },
+        "previsao_20260731_manica_Dia1": {
+            "1": "previsao_20260731_manica_Dia1_31072026.png"
+        },
+        "previsao_20260731_manica_Dia2": {
+            "1": "previsao_20260731_manica_Dia2_01082026.png"
+        },
+        "previsao_20260731_manica_Dia3": {
+            "1": "previsao_20260731_manica_Dia3_02082026.png"
+        },
+        "previsao_20260731_maputo_Dia1": {
+            "1": "previsao_20260731_maputo_Dia1_31072026.png"
+        },
+        "previsao_20260731_maputo_Dia2": {
+            "1": "previsao_20260731_maputo_Dia2_01082026.png"
+        },
+        "previsao_20260731_maputo_Dia3": {
+            "1": "previsao_20260731_maputo_Dia3_02082026.png"
+        },
+        "previsao_20260731_nampula_Dia1": {
+            "1": "previsao_20260731_nampula_Dia1_31072026.png"
+        },
+        "previsao_20260731_nampula_Dia2": {
+            "1": "previsao_20260731_nampula_Dia2_01082026.png"
+        },
+        "previsao_20260731_nampula_Dia3": {
+            "1": "previsao_20260731_nampula_Dia3_02082026.png"
+        },
+        "previsao_20260731_niassa_Dia1": {
+            "1": "previsao_20260731_niassa_Dia1_31072026.png"
+        },
+        "previsao_20260731_niassa_Dia2": {
+            "1": "previsao_20260731_niassa_Dia2_01082026.png"
+        },
+        "previsao_20260731_niassa_Dia3": {
+            "1": "previsao_20260731_niassa_Dia3_02082026.png"
+        },
+        "previsao_20260731_sofala_Dia1": {
+            "1": "previsao_20260731_sofala_Dia1_31072026.png"
+        },
+        "previsao_20260731_sofala_Dia2": {
+            "1": "previsao_20260731_sofala_Dia2_01082026.png"
+        },
+        "previsao_20260731_sofala_Dia3": {
+            "1": "previsao_20260731_sofala_Dia3_02082026.png"
+        },
+        "previsao_20260731_tete_Dia1": {
+            "1": "previsao_20260731_tete_Dia1_31072026.png"
+        },
+        "previsao_20260731_tete_Dia2": {
+            "1": "previsao_20260731_tete_Dia2_01082026.png"
+        },
+        "previsao_20260731_tete_Dia3": {
+            "1": "previsao_20260731_tete_Dia3_02082026.png"
+        },
+        "previsao_20260731_zambezia_Dia1": {
+            "1": "previsao_20260731_zambezia_Dia1_31072026.png"
+        },
+        "previsao_20260731_zambezia_Dia2": {
+            "1": "previsao_20260731_zambezia_Dia2_01082026.png"
+        },
+        "previsao_20260731_zambezia_Dia3": {
+            "1": "previsao_20260731_zambezia_Dia3_02082026.png"
+        }
+    },
+    "locations": {
+        "cabo_delgado": {
+            "csv": "previsao_20260731_cabo_delgado.csv",
+            "days": {
+                "1": "previsao_20260731_cabo_delgado_Dia1_31072026.txt",
+                "2": "previsao_20260731_cabo_delgado_Dia2_01082026.txt",
+                "3": "previsao_20260731_cabo_delgado_Dia3_02082026.txt"
+            }
+        },
+        "capitais": {
+            "csv": "previsao_20260731_capitais.csv",
+            "days": {
+                "1": "previsao_20260731_capitais_Dia1_31072026.txt",
+                "2": "previsao_20260731_capitais_Dia2_01082026.txt",
+                "3": "previsao_20260731_capitais_Dia3_02082026.txt"
+            }
+        },
+        "gaza": {
+            "csv": "previsao_20260731_gaza.csv",
+            "days": {
+                "1": "previsao_20260731_gaza_Dia1_31072026.txt",
+                "2": "previsao_20260731_gaza_Dia2_01082026.txt",
+                "3": "previsao_20260731_gaza_Dia3_02082026.txt"
+            }
+        },
+        "inhambane": {
+            "csv": "previsao_20260731_inhambane.csv",
+            "days": {
+                "1": "previsao_20260731_inhambane_Dia1_31072026.txt",
+                "2": "previsao_20260731_inhambane_Dia2_01082026.txt",
+                "3": "previsao_20260731_inhambane_Dia3_02082026.txt"
+            }
+        },
+        "manica": {
+            "csv": "previsao_20260731_manica.csv",
+            "days": {
+                "1": "previsao_20260731_manica_Dia1_31072026.txt",
+                "2": "previsao_20260731_manica_Dia2_01082026.txt",
+                "3": "previsao_20260731_manica_Dia3_02082026.txt"
+            }
+        },
+        "maputo": {
+            "csv": "previsao_20260731_maputo.csv",
+            "days": {
+                "1": "previsao_20260731_maputo_Dia1_31072026.txt",
+                "2": "previsao_20260731_maputo_Dia2_01082026.txt",
+                "3": "previsao_20260731_maputo_Dia3_02082026.txt"
+            }
+        },
+        "nampula": {
+            "csv": "previsao_20260731_nampula.csv",
+            "days": {
+                "1": "previsao_20260731_nampula_Dia1_31072026.txt",
+                "2": "previsao_20260731_nampula_Dia2_01082026.txt",
+                "3": "previsao_20260731_nampula_Dia3_02082026.txt"
+            }
+        },
+        "niassa": {
+            "csv": "previsao_20260731_niassa.csv",
+            "days": {
+                "1": "previsao_20260731_niassa_Dia1_31072026.txt",
+                "2": "previsao_20260731_niassa_Dia2_01082026.txt",
+                "3": "previsao_20260731_niassa_Dia3_02082026.txt"
+            }
+        },
+        "sofala": {
+            "csv": "previsao_20260731_sofala.csv",
+            "days": {
+                "1": "previsao_20260731_sofala_Dia1_31072026.txt",
+                "2": "previsao_20260731_sofala_Dia2_01082026.txt",
+                "3": "previsao_20260731_sofala_Dia3_02082026.txt"
+            }
+        },
+        "tete": {
+            "csv": "previsao_20260731_tete.csv",
+            "days": {
+                "1": "previsao_20260731_tete_Dia1_31072026.txt",
+                "2": "previsao_20260731_tete_Dia2_01082026.txt",
+                "3": "previsao_20260731_tete_Dia3_02082026.txt"
+            }
+        },
+        "zambezia": {
+            "csv": "previsao_20260731_zambezia.csv",
+            "days": {
+                "1": "previsao_20260731_zambezia_Dia1_31072026.txt",
+                "2": "previsao_20260731_zambezia_Dia2_01082026.txt",
+                "3": "previsao_20260731_zambezia_Dia3_02082026.txt"
+            }
+        }
+    },
+    "pdf": "previsao_20260731.pdf"
+}

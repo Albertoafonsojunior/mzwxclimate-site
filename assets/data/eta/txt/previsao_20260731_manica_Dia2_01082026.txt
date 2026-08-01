@@ -1,0 +1,20 @@
+PREVISÃO METEOROLÓGICA - PROVÍNCIA DE MANICA
+Modelo: Eta08 | Inicialização: 31/07/2026 00UTC
+Previsão para: 01/08/2026 (Dia2_01082026)
+=================================================================
+Localidade       | Prec (mm) | Tmax (°C) | Tmin (°C)
+=================================================================
+Chimoio         |      0.0 |      25.0 |      13.6
+Manica          |      0.0 |      24.0 |      14.0
+Macossa         |      0.0 |      25.8 |      13.4
+Guro            |      0.0 |      22.9 |      13.0
+Tambara         |      0.0 |      24.7 |      15.1
+Gondola         |      0.0 |      25.2 |      13.6
+Chimoio B4      |      0.0 |      25.0 |      13.6
+Sussundenga Inam |      0.0 |      23.6 |      13.3
+Dombe           |      0.0 |      24.4 |      13.1
+Chicamba        |      0.0 |      21.1 |      12.9
+Chitobe         |      0.0 |      24.3 |      11.9
+IAM Sussunenga  |      0.0 |      23.6 |      13.3
+Messambuzi      |      0.0 |      24.2 |      13.7
+=================================================================
