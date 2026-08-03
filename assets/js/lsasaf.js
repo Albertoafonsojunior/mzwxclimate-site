@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const container = document.getElementById("lsasaf-products");
 
+    console.log("Container:", container);
+
     fetch("../assets/data/lsasaf/products.json")
         .then(response => response.json())
         .then(products => {
