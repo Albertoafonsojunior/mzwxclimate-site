@@ -1,7 +1,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -13,12 +12,13 @@
 Produtos LSASAF - MZ WX & Climate
 </title>
 
+
 <style>
 
 body {
 
     font-family: Arial, sans-serif;
-    margin: 30px;
+    margin:30px;
     background:#f5f5f5;
 
 }
@@ -26,72 +26,57 @@ body {
 
 h1 {
 
-    text-align:center;
+text-align:center;
 
 }
 
 
-#lsasaf-products {
+.selector {
 
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(350px,1fr));
-
-    gap:25px;
+text-align:center;
+margin:30px;
 
 }
 
 
-.product-card {
+select {
 
-    background:white;
-    padding:20px;
-    border-radius:10px;
-
-    box-shadow:
-    0 2px 8px rgba(0,0,0,0.15);
+font-size:18px;
+padding:10px;
+width:350px;
 
 }
 
 
-.product-card h2 {
+#product-view {
 
-    text-align:center;
-    font-size:20px;
+background:white;
+padding:20px;
+border-radius:10px;
+max-width:900px;
+margin:auto;
 
 }
 
 
 .map-image {
 
-    width:100%;
-    border-radius:8px;
+width:100%;
+border-radius:10px;
 
 }
 
 
-.gallery {
+.gallery img {
 
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:15px;
-
-}
-
-
-.thumb {
-
-    width:100px;
-    height:70px;
-    object-fit:cover;
-
-    border-radius:5px;
+width:120px;
+margin:10px;
 
 }
 
 
 </style>
+
 
 </head>
 
@@ -100,15 +85,28 @@ h1 {
 
 
 <h1>
-Produtos LSASAF - EUMETSAT
+Produtos EUMETSAT / LSA SAF
 </h1>
 
 
-<div id="lsasaf-products">
+<div class="selector">
 
-Carregando produtos...
+<select id="product-select">
+
+<option>
+Escolha o Produto
+</option>
+
+</select>
 
 </div>
+
+
+
+<div id="product-view">
+
+</div>
+
 
 
 <script src="../assets/js/lsasaf.js"></script>
@@ -116,7 +114,9 @@ Carregando produtos...
 
 </body>
 
+
 </html>
+
 
 
 

@@ -1,69 +1,137 @@
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function(){
 
-    const container = document.getElementById("lsasaf-products");
 
-    console.log("Container:", container);
+let products=[];
 
-    fetch("../assets/data/lsasaf/products.json")
-        .then(response => response.json())
-        .then(products => {
 
-            products.forEach(product => {
+const select =
+document.getElementById("product-select");
 
-                if (!product.available) {
-                    return;
-                }
 
-                let card = document.createElement("div");
-                card.className = "product-card";
+const view =
+document.getElementById("product-view");
 
-                let html = `
-                    <h2>${product.name}</h2>
 
-                    <img 
-                        src="../${product.latest}" 
-                        alt="${product.name}"
-                        class="map-image">
 
-                    <div class="gallery">
-                `;
+fetch("../assets/data/lsasaf/products.json")
 
-                product.images.forEach(img => {
+.then(response => response.json())
 
-                    html += `
-                        <a href="../${img}" target="_blank">
-                            <img 
-                              src="../${img}" 
-                              class="thumb">
-                        </a>
-                    `;
+.then(data=>{
 
-                });
 
-                html += `
-                    </div>
-                `;
+products=data;
 
-                card.innerHTML = html;
 
-                container.appendChild(card);
+data.forEach(product=>{
 
-            });
 
-        })
+if(product.available){
 
-        .catch(error => {
-            console.error(
-                "Erro carregando produtos LSASAF:",
-                error
-            );
 
-            container.innerHTML =
-            "<p>Erro ao carregar produtos LSASAF.</p>";
-        });
+let option =
+document.createElement("option");
+
+
+option.value=product.id;
+
+option.textContent=product.name;
+
+
+select.appendChild(option);
+
+
+}
+
+
+});
+
+
+});
+
+
+
+
+select.addEventListener("change",function(){
+
+
+let id=this.value;
+
+
+let product =
+products.find(p=>p.id===id);
+
+
+
+if(!product){
+
+view.innerHTML="";
+
+return;
+
+}
+
+
+
+let html=`
+
+
+<h2>
+${product.name}
+</h2>
+
+
+<img 
+src="../${product.latest}"
+class="map-image">
+
+
+<h3>
+Histórico
+</h3>
+
+
+<div class="gallery">
+
+`;
+
+
+
+product.images.forEach(img=>{
+
+
+html += `
+
+<a href="../${img}" target="_blank">
+
+<img src="../${img}">
+
+</a>
+
+`;
+
+
+});
+
+
+
+html +=`
+
+</div>
+
+`;
+
+
+
+view.innerHTML=html;
+
+
+
+});
+
 
 });
 
